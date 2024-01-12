@@ -1,0 +1,53 @@
+@use "../../styles/Color" as color;
+
+.container {
+    background-color: white;
+    box-shadow: color.$shadow;
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 1.5rem;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 1.0625rem 1.625rem;
+    box-shadow: none;
+    gap: 1.2rem;
+    background-color: whitesmoke;
+    margin-top: 0 !important;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+}
+.main_container {
+    padding: 1rem;
+}
+
+.mobile {
+    box-shadow: none;
+
+    .header {
+        padding: 1rem 0;
+        box-shadow: none;
+    }
+    .main_container {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .header_button {
+        button {
+            span {
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .header_menu {
+        span {
+            padding: 1.3rem 1rem;
+        }
+    }
+}

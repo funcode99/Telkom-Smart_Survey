@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 4rem 0;
+}
+.body {
+    * {
+        display: block;
+        margin: auto;
+    }
+
+    span {
+        font-size: 1.125rem;
+        color: #313466;
+        font-weight: bold;
+        margin: 1rem auto 1.5rem;
+    }
+
+    button {
+        color: #5c5c5c;
+        font-weight: bold;
+        font-size: 14px;
+    }
+}

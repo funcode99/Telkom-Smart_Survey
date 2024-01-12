@@ -1,0 +1,24 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Modal" as modal;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+
+    h2 {
+        text-align: center;
+        margin: 2.25rem 0 0.625rem;
+        color: #333;
+        font-weight: bold;
+        font-size: 0.9375rem;
+    }
+    p {
+        text-align: center;
+        margin: 0 0 1.3125rem;
+        color: #808285;
+        font-size: 0.9375rem;
+    }
+}

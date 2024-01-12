@@ -1,0 +1,36 @@
+@use "./Template" as template;
+
+.container {
+    @include template.container;
+}
+.section {
+    @include template.section;
+}
+.logo {
+    @include template.logo;
+    margin-top: 2rem;
+}
+.scan_me {
+    @include template.scan_me;
+}
+.qrcode {
+    @include template.qrcode;
+    margin-bottom: 2rem;
+}
+.text {
+    @include template.text;
+}
+.text_secondary {
+    @include template.text_secondary;
+    margin-top: -0.5rem;
+}
+.sponsor {
+    @include template.sponsor;
+}
+.bottom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1rem;
+}

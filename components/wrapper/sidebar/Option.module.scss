@@ -1,0 +1,62 @@
+@use "../../../styles/Color" as color;
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 0 2.25rem;
+    margin-bottom: 2rem;
+}
+.option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 1.1875rem;
+
+    label {
+        flex: 1;
+        color: color.$font-accent;
+        font-weight: bold;
+        font-size: 0.9375rem;
+
+        cursor: pointer;
+
+        &.active {
+            color: color.$accent;
+        }
+    }
+
+    &:hover {
+        label {
+            color: color.$accent;
+        }
+    }
+
+    &.active {
+        label {
+            color: color.$accent;
+        }
+    }
+}
+.bottom_option {
+    display: flex;
+    margin-top: auto;
+    gap: 1.3rem;
+    flex-direction: column;
+}
+.logout {
+    label {
+        color: #b21f15;
+    }
+
+    &:hover {
+        label {
+            color: #b21f15;
+        }
+    }
+}
+
+.mobile {
+    padding: 0 1.75rem;
+}

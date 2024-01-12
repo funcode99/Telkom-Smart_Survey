@@ -1,0 +1,82 @@
+import { useCallback } from "react";
+import { useRecoilState } from "recoil";
+import { firebaseAnalytic, firebaseFirestore } from "./recoil";
+import { initializeApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+import { collection, doc, setDoc } from "firebase/firestore";
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDAlrU-xiFMDLwQ-C7pePbrDhu0k6ZDfFI",
+    authDomain: "smartsurvey-5b775.firebaseapp.com",
+    projectId: "smartsurvey-5b775",
+    storageBucket: "smartsurvey-5b775.appspot.com",
+    messagingSenderId: "665993613302",
+    appId: "1:665993613302:web:63cba213abd50a10e681d7",
+    measurementId: "G-05PXDH5D2H"
+};
+
+const useFirebase = () => {
+    const [firebase, setFirebase] = useRecoilState(firebaseAnalytic);
+    const [firestore, setFirestore] = useRecoilState(firebaseFirestore);
+
+    const initialize = (callback) => {
+        if (typeof window === "undefined") return;
+        const app = initializeApp(firebaseConfig);
+        const firebaseState = getAnalytics(app);
+        const firestoreState = getFirestore(app)
+        console.log(firestoreState)
+        setFirebase(firebaseState);
+        setFirestore(firestoreState)
+
+        if (callback) callback({ firebaseState, firestoreState });
+    };
+
+    const logger = useCallback(
+        (event_name, parameter) => {
+            if (firebase) {
+                logEvent(firebase, event_name, parameter);
+            } else {
+                initialize(({ firebaseState }) => logEvent(firebaseState, event_name, parameter));
+            }
+        },
+        [firebase]
+    );
+
+    const setDocumentFunction = async (firestore, userId) => {
+        try {
+            const docRef = await setDoc(doc(firestore, "login", "superadmin"), {
+                key: "testaaa"
+            });
+            console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    }
+
+    const setDocument = useCallback(
+        (userId) => {
+            if (firestore) {
+                setDocumentFunction(firestore, userId)
+            } else {
+                initialize(({ firestoreState }) => setDocumentFunction(firestoreState, userId))
+            }
+        },
+        [firebase]
+    );
+
+
+
+    return {
+        initializeFirebase: () => initialize(),
+        logEvent: (event_name, parameter) => {
+            logger(event_name, parameter);
+        },
+        setDocument: (userId) => {
+            setDocument(userId)
+        }
+    };
+};
+
+export default useFirebase;

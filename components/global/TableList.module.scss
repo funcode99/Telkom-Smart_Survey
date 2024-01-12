@@ -1,0 +1,132 @@
+@use "../../styles/Color" as color;
+
+.container {
+    padding: 1rem 0 0;
+    width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        height: 0.625rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: #ececec;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(192, 192, 192);
+    }
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 0.625rem;
+    background-color: #fff;
+    color: rgb(40, 40, 40);
+    box-shadow: color.$shadow;
+    user-select: text;
+    padding-bottom: 1rem;
+}
+
+.header {
+    tr {
+        border-left: solid 3px rgba(0, 0, 0, 0);
+    }
+
+    th {
+        text-align: left;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+        // text-transform: uppercase;
+        font-size: 14px;
+        color: #999b9d;
+        line-height: 21px;
+
+        &.active {
+            color: black;
+        }
+        span {
+            flex-grow: 1;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+        }
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+.body {
+    padding-bottom: 1rem;
+
+    tr.list {
+        border-left: solid 3px rgba(0, 0, 0, 0);
+        cursor: pointer;
+
+        &:hover {
+            border-left: solid 3px color.$accent;
+            background-color: rgba(color.$accent, 0.05);
+
+            td {
+                button {
+                    svg {
+                        fill: color.$accent;
+                    }
+                }
+            }
+        }
+    }
+
+    td {
+        border-top: solid 1px #ebeff2;
+        padding: 20px 15px;
+        font-size: 14px;
+        color: #191a1a;
+
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: 0.1s;
+            outline: none;
+            border: none;
+            color: #37559d;
+            background-color: transparent;
+            font-size: inherit;
+            font-family: inherit;
+            user-select: none;
+
+            &:active {
+                transform: translateY(10%);
+            }
+            svg {
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+.empty {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    padding: 80px 0 120px;
+
+    svg {
+        width: 160px;
+        height: 160px;
+    }
+
+    span {
+        margin-top: 25px;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #333333;
+    }
+}

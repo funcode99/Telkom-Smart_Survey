@@ -1,0 +1,56 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Modal" as modal;
+
+.overlay {
+    @include modal.overlay;
+}
+.main_container {
+    @include modal.container;
+
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.15s ease;
+    animation: fade 0.3s;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: #ececec;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(192, 192, 192);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.progressbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 70vw;
+    height: 5px;
+    background-color: white;
+    animation: loading 2s ease-in-out infinite alternate;
+    transform: translateZ(0);
+}
+
+@keyframes loading {
+    from {
+        left: -70vw;
+    }
+    to {
+        left: 100%;
+    }
+}

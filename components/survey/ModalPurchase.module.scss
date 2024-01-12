@@ -1,0 +1,21 @@
+@use "../../styles/Color" as color;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4375rem;
+    margin: 1.625rem 0 2.5rem;
+    color: color.$font-accent;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+    span {
+        font-size: 0.875rem;
+    }
+    label {
+        font-size: 1.125rem;
+        font-weight: bold;
+    }
+}

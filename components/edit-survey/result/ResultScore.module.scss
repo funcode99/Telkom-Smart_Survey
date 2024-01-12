@@ -1,0 +1,43 @@
+@use "../../../styles/Color" as color;
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3125rem;
+    color: color.$font-accent;
+    padding: 1rem 0;
+}
+.number {
+    color: #adaec2;
+}
+.score {
+    flex: 1;
+    border-left: 2px solid #e5e5e5;
+
+    .chart {
+        display: flex;
+        align-items: center;
+        gap: 0.5625rem;
+
+        div {
+            width: 0;
+            height: 1.3125rem;
+            border-radius: 0 0.3125rem 0.3125rem 0;
+            transition: 2s;
+        }
+        span {
+            font-size: 0.9375rem;
+        }
+    }
+}

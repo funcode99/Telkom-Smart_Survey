@@ -1,0 +1,39 @@
+@use "../../styles/Color" as color;
+
+.progressbar {
+    position: fixed;
+    top: 00px;
+    left: 0;
+    right: 0;
+    width: 70vw;
+    height: 4px;
+    background-color: white;
+    animation: loading 2s ease-in-out infinite alternate;
+    transform: translateZ(0);
+    z-index: 5;
+}
+
+@keyframes loading {
+    from {
+        left: -70vw;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.statusbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    font-size: 12px;
+    width: fit-content;
+    padding: 14px;
+    background-color: color.$accent;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transform: translate(-50%);
+}

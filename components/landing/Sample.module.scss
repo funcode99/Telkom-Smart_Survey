@@ -1,0 +1,58 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Size" as size;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 3.125rem 0;
+    width: 100%;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: size.$max-width;
+}
+.title {
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: color.$font-accent;
+        text-align: center;
+    }
+    p {
+        margin: 0.625rem 0 3rem;
+        color: color.$font-accent;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+}
+.card_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.125rem;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    span {
+        color: #a980f8;
+        font-size: 12px;
+    }
+    svg {
+        color: #a980f8;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .container {
+        padding: 2rem 0;
+    }
+}

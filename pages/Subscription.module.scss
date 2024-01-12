@@ -1,0 +1,122 @@
+@use "../styles/Color" as color;
+
+.container {
+    background: #ffffff;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    margin-top: 1.25rem;
+}
+.title {
+    margin-bottom: 2.25rem;
+
+    h3 {
+        font-weight: normal;
+        text-align: center;
+        color: color.$font-accent;
+        font-size: 1.375rem;
+        margin-bottom: 0.75rem;
+    }
+    b {
+        font-size: 1.75rem;
+    }
+    p {
+        text-align: center;
+        color: #666666;
+        font-size: 0.875rem;
+        margin: 0;
+    }
+}
+.card_container {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+    -moz-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30rem;
+    border: 1px solid #cccdce;
+    border-radius: 0.875rem;
+    padding: 1.75rem 4.375rem 1.5rem;
+    color: color.$font-accent;
+
+    h5 {
+        font-size: 1.5rem;
+    }
+    button {
+        height: 2.75rem;
+        width: 10.3125rem;
+        margin-top: auto;
+    }
+
+    &:hover {
+        border: 1px solid color.$accent;
+    }
+}
+.price {
+    display: flex;
+    width: 100%;
+    height: 2.6875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.125rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 0.125rem;
+    }
+    span {
+        font-size: 0.875rem;
+        color: #666666;
+        transform: translateY(20%);
+
+        &.rupiah {
+            transform: translateY(-40%);
+        }
+    }
+    label {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    .separator {
+        height: 100%;
+        width: 1px;
+        background-color: #cccdce;
+    }
+}
+.features {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.5rem 0 1.375rem;
+    border-top: 1px solid #cccdce;
+    color: #666666;
+}
+.features_title {
+    font-weight: bold;
+    padding: 0 0.5625rem;
+}
+.list_container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.list {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(169, 128, 248, 0.1);
+    }
+}

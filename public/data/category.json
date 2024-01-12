@@ -1,0 +1,68 @@
+[
+    {
+        "_id": "61a8dc676736b45a709d7b32",
+        "category": "Business & E-Commerce",
+        "category_ina": "Bisnis & E-Commerce",
+        "categoryId": "f2cba0e6-bef6-4121-b7cd-d8bb1699ae22"
+    },
+    {
+        "_id": "61a9b80d1071600036d072e6",
+        "category": "Education",
+        "category_ina": "Pendidikan",
+        "categoryId": "77243e5c-b75e-4005-b086-80f638257f25"
+    },
+    {
+        "_id": "61a9b8131071600036d072e7",
+        "category": "Fashion",
+        "category_ina": "Trend Fashion",
+        "categoryId": "ead36da0-49f2-4be3-b017-88323d960b59"
+    },
+    {
+        "_id": "61a9b8171071600036d072e8",
+        "category": "Food",
+        "category_ina": "Makanan",
+        "categoryId": "bff4bedc-afc1-4a2b-9dd5-e0fdb6c287ea"
+    },
+    {
+        "_id": "61a9b81c1071600036d072e9",
+        "category": "Health",
+        "category_ina": "Kesehatan",
+        "categoryId": "b9c490f1-ba9a-4079-86b0-15582f7851f8"
+    },
+    {
+        "_id": "61a9b825aa67550030cfbe95",
+        "category": "Market Research",
+        "category_ina": "Riset Market",
+        "categoryId": "035e1d7b-3771-43e5-94bb-08f6b2be2c53"
+    },
+    {
+        "_id": "61a9b82aaa67550030cfbe96",
+        "category": "Music",
+        "category_ina": "Musik",
+        "categoryId": "584c271f-18d9-4879-a1b9-a4504a25afec"
+    },
+    {
+        "_id": "61a9b8341071600036d072ea",
+        "category": "Travel & Tourism",
+        "category_ina": "Perjalanan & Pariwisata",
+        "categoryId": "9bdacc46-c337-4996-a506-3aba0ebd167a"
+    },
+    {
+        "_id": "61a9b8381071600036d072eb",
+        "category": "Sport",
+        "category_ina": "Olahraga",
+        "categoryId": "baee1220-66a9-4d45-8b49-01d4d255c20c"
+    },
+    {
+        "_id": "61a9b840aa67550030cfbe97",
+        "category": "Work & Occupation",
+        "category_ina": "Pekerjaan & Karir",
+        "categoryId": "8d12f035-6000-4c5e-8b86-7f8a089589e6"
+    },
+    {
+        "_id": "61a9b8541071600036d072ec",
+        "category": "Others",
+        "category_ina": "Lainnya",
+        "categoryId": "d6396379-0c01-48f8-b882-882c43672e94"
+    }
+]

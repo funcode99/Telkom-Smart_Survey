@@ -1,0 +1,10 @@
+{
+    "merchant_create": "Register Merchant",
+    "merchant_name": "Merchant Name",
+    "merchant_address": "Merchant Address",
+    "merchant_open_hour": "Open Hour",
+    "merchant_logo": "Merchant Logo",
+    "merchant_choose_address": "Choose Address",
+    "merchant_create_success_title": "Register Success!",
+    "merchant_create_success_message": "Please wait until your verification have been approved"
+}

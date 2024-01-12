@@ -1,0 +1,10 @@
+{
+    "merchant_create": "Daftar Merchant",
+    "merchant_name": "Nama Merchant",
+    "merchant_address": "Alamat Merchant",
+    "merchant_open_hour": "Jam Buka",
+    "merchant_logo": "Logo Merchant",
+    "merchant_choose_address": "Pilih Alamat",
+    "merchant_create_success_title": "Pendaftaran Berhasil!",
+    "merchant_create_success_message": "Silakan tunggu hingga proses verifikasi merchant selesai"
+}

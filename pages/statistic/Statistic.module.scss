@@ -1,0 +1,36 @@
+@use "../../styles/Color" as color;
+
+.header {
+    margin-top: 0.5rem;
+
+    h3 {
+        color: color.$font-accent;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+    svg {
+        color: #9176ee;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &.header_flex {
+        display: flex;
+        align-items: center;
+        gap: 1.125rem;
+    }
+}
+.card_container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 1.0625rem;
+    margin: 1rem 0 1.5rem;
+}
+.chart {
+    margin-top: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2.25rem 1.75rem 1.75rem;
+    box-shadow: color.$shadow;
+}

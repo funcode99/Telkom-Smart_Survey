@@ -1,0 +1,14 @@
+@use "../styles/Color" as color;
+
+.title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: color.$font-accent;
+    margin: 0.5rem 0;
+}
+.star {
+    width: 1.125rem;
+    height: 1.125rem;
+    color: color.$accent;
+    margin: 0.5rem 0;
+}

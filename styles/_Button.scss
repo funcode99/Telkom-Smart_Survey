@@ -1,0 +1,73 @@
+@use "./Color" as color;
+
+@mixin basic {
+    flex: 1;
+    padding: 0.625rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: color.$accent-gradient;
+    border: 1px solid color.$accent;
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+        background: color.$accent;
+    }
+    &:disabled {
+        cursor: wait;
+    }
+}
+@mixin icon {
+    @include basic;
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: fit-content;
+    border: 1px solid color.$accent;
+    padding: 0.625rem 0.8rem;
+}
+@mixin transparent {
+    background: transparent;
+    color: color.$accent;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    &:disabled {
+        cursor: wait;
+    }
+}
+
+// container
+@mixin container {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    font-size: 0.8rem;
+
+    button {
+        @include basic;
+    }
+}
+@mixin container_right {
+    @include container;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+        flex: none;
+    }
+}
+@mixin container_sticky {
+    @include container;
+    position: sticky;
+    bottom: 0;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    background-color: #fff;
+}

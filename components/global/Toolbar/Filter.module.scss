@@ -1,0 +1,32 @@
+@use "../../../styles/Color" as color;
+
+.button {
+    height: 2.5rem;
+    min-width: fit-content;
+    background: #fff;
+    border-color: transparent;
+    box-shadow: color.$shadow-l;
+}
+.modal_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: -0.5rem 0 0.5rem;
+    gap: 0.5rem;
+}
+.searchbox {
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        color: color.$font-accent;
+    }
+    input {
+        padding-right: 3.25rem;
+    }
+}

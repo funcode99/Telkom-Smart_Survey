@@ -1,0 +1,44 @@
+@use "../styles/Color" as color;
+@use "../styles/Input" as input;
+@use "../styles/Button" as button;
+@use "../styles/Login" as login;
+
+.container {
+    padding: 1.8125rem;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    width: 25rem;
+    max-width: 100%;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1.875rem;
+    }
+    label {
+        font-size: 0.75rem;
+        letter-spacing: 0.05rem;
+        color: #66686a;
+    }
+
+    p {
+        color: #66686a;
+        text-align: center;
+        margin: 20px 16px 0;
+        font-size: 0.875rem;
+
+        span {
+            color: color.$accent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        padding: 1rem;
+    }
+}

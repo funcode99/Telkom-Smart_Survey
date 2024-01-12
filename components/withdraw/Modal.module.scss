@@ -1,0 +1,24 @@
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.75rem;
+    gap: 1rem;
+
+    h5 {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #333333;
+    }
+
+    .close {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+        color: #756ce0;
+        margin-left: auto;
+    }
+}
+.split {
+    display: flex;
+    gap: 1rem;
+}

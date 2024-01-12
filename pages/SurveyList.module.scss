@@ -1,0 +1,12 @@
+.body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    justify-content: center;
+    grid-gap: 1rem;
+    width: 100%;
+    margin: 1.25rem 0;
+}
+
+.searchbar {
+    margin-right: 1rem;
+}

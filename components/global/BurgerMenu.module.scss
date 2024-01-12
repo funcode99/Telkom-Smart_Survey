@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+}
+.panel {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    right: 0;
+
+    span {
+        display: block;
+        width: max-content;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../../styles/Survey" as survey;
+
+.container {
+    @include survey.container;
+}
+.background {
+    @include survey.background;
+}
+.content {
+    @include survey.content;
+}
+.loading {
+    @include survey.loading;
+}

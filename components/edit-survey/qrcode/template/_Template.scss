@@ -1,0 +1,102 @@
+@use "../../../../styles/Color" as color;
+
+@mixin container {
+    height: 794px;
+    width: 559px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #aa80f9 0%, #756ce0 100%);
+    padding: 1rem;
+    color: white;
+}
+@mixin logo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+@mixin section {
+    flex: 1;
+}
+@mixin qrcode {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 258px;
+    height: 258px;
+
+    canvas {
+        width: 250px;
+        height: 250px;
+    }
+}
+@mixin scan_me {
+    position: absolute;
+    bottom: 100%;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+
+    background: #ff4132;
+    border-radius: 1.25rem;
+
+    label {
+        padding: 0.75rem 1.375rem;
+        border-radius: 1.25rem;
+
+        &:hover {
+            border-color: #ff4132;
+        }
+    }
+    div {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 100%);
+        width: 0;
+        height: 0;
+        border-left: 0.75rem solid transparent;
+        border-right: 0.75rem solid transparent;
+
+        border-top: 0.75rem solid #ff4132;
+    }
+}
+@mixin text {
+    position: relative;
+    border: 1px dotted transparent;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    word-break: break-all;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Poppins";
+    outline: none;
+    cursor: text;
+
+    &:hover {
+        border-color: white;
+    }
+}
+
+@mixin text_secondary {
+    @include text;
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+@mixin sponsor {
+    display: flex;
+    align-items: center;
+    margin: auto 0 0.5rem;
+    gap: 0.25rem;
+
+    svg {
+        height: 1.75rem;
+    }
+}

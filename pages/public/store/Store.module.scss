@@ -1,0 +1,50 @@
+@use "../../../styles/Color" as color;
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+
+.body {
+    margin: 6rem auto 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1600px;
+}
+
+.title {
+    width: 100%;
+    color: color.$font-accent;
+    margin: 2.125rem 0 0;
+
+    h2 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+}
+
+.content {
+    margin-bottom: 3rem;
+}
+
+.more_card {
+    display: flex;
+    max-width: 16rem;
+    height: 19rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+    box-shadow: color.$shadow;
+    padding: 1.125rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

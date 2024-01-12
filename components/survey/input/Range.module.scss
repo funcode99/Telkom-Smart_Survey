@@ -1,0 +1,29 @@
+@use "../../../styles/Color" as color;
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 2.5rem;
+}
+
+.button_container {
+    display: flex;
+    gap: 1rem;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    svg {
+        transform: scale(1.2);
+    }
+    span {
+        font-size: 0.75rem;
+        color: color.$font-accent;
+    }
+}

@@ -1,0 +1,250 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Input" as input;
+@use "../../styles/Button" as button;
+
+.settings {
+    margin-bottom: 20px;
+    padding: 0 0.5rem;
+}
+.settings_card {
+    display: flex;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #f2f2f2;
+
+    .title {
+        display: flex;
+        gap: 0.5rem;
+        width: 200px;
+        padding: 0.125rem 1rem 0.125rem 0;
+        text-transform: capitalize;
+    }
+
+    label {
+        font-size: 0.8rem;
+        color: #4f4f4f;
+        font-weight: bold;
+    }
+    input,
+    textarea {
+        @include input.basic;
+        width: 30rem;
+        font-size: 0.9375rem;
+    }
+
+    &.center {
+        align-items: center;
+    }
+
+    .dropdown {
+        width: 30rem !important;
+
+        &.loading {
+            cursor: wait;
+        }
+    }
+
+    .radio {
+        display: flex;
+        align-items: center;
+        gap: 2.1875rem;
+
+        span {
+            font-size: 0.9375rem;
+        }
+    }
+
+    .settings_delete {
+        font-size: 1.125rem;
+        background-color: rgb(80, 80, 80);
+        padding: 0.625rem 0.9375rem;
+        border-radius: 0.1875rem;
+        color: white;
+    }
+
+    // @import "radio";
+
+    .dropdown {
+        width: 100%;
+        max-width: 31.25rem;
+    }
+
+    .reward_qty {
+        margin-left: 0.5rem;
+        color: #808080;
+        font-size: 0.9375rem;
+    }
+}
+
+.period_container {
+    .period_radio {
+        display: flex;
+        gap: 2.1875rem;
+        align-items: center;
+        margin-bottom: 0.8125rem;
+        font-size: 0.9375rem;
+
+        div {
+            flex: 0;
+        }
+    }
+    .period_input_container {
+        width: 30rem;
+        margin-top: 1.25rem;
+        display: flex;
+        gap: 1rem;
+
+        label {
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            color: #66686a;
+            font-weight: 400;
+        }
+    }
+    .period_input {
+        flex: 1;
+        cursor: pointer;
+    }
+    .period_date {
+        position: relative;
+
+        input {
+            position: relative;
+            height: 2.375rem;
+            width: 100%;
+            cursor: pointer;
+            z-index: 2;
+            background-color: transparent;
+        }
+
+        svg {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.price_container {
+    .price_radio {
+        display: flex;
+        gap: 2.1875rem;
+        align-items: center;
+        margin-bottom: 0.8125rem;
+        font-size: 0.9375rem;
+
+        div {
+            flex: 0;
+        }
+    }
+    .price_input {
+        height: 2.375rem;
+        display: flex;
+        gap: 1rem;
+
+        label {
+            color: #bdbdbd;
+            font-size: 0.9375rem;
+            font-weight: bold;
+            align-self: center;
+        }
+
+        .input {
+            width: 30rem;
+            display: flex;
+            align-items: center;
+            border: 1px solid #e5e6e6;
+            border-radius: 0.25rem;
+
+            input {
+                border: none;
+                height: 100%;
+            }
+            div {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            span {
+                padding: 0 1rem;
+                font-size: 0.9375rem;
+            }
+
+            .left {
+                color: #999b9d;
+                border-right: 1px solid #e5e6e6;
+            }
+            .right {
+                color: #808285;
+                border-left: 1px solid #e5e6e6;
+                background-color: #f5f5f5;
+            }
+        }
+    }
+}
+.reward_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    .reward {
+        display: flex;
+        align-items: center;
+        gap: 0.8125rem;
+        flex-wrap: nowrap;
+
+        label {
+            color: #bdbdbd;
+            font-size: 0.9375rem;
+            font-weight: bold;
+        }
+
+        .refund {
+            font-size: 0.8125rem;
+            padding: 0;
+            font-weight: bold;
+            color: #756ce0;
+        }
+    }
+
+    .reward_voucher {
+        display: flex;
+        align-items: flex-end;
+
+        div {
+            position: relative;
+            width: 9.5rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+            margin-right: 0.75rem;
+            overflow: hidden;
+        }
+        span {
+            font-size: 0.9375rem;
+        }
+    }
+
+    .point {
+        display: flex;
+        background: #f5f5f5;
+        border: 1px solid #e5e6e6;
+        border-radius: 4px;
+        width: 21.875rem;
+
+        span {
+            font-size: 0.9375rem;
+            color: #333435;
+            padding: 0.625rem 0.75rem;
+            flex: 1;
+        }
+        .left {
+            flex: 2;
+        }
+        .center {
+            border-left: 1px solid #e5e6e6;
+            border-right: 1px solid #e5e6e6;
+            font-weight: bold;
+            color: color.$font-accent;
+        }
+    }
+}

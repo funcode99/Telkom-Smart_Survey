@@ -1,0 +1,58 @@
+@use "../../styles/Color" as color;
+
+.title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: color.$font-accent;
+}
+
+.body {
+    margin-bottom: 3rem;
+}
+
+.header {
+    display: flex;
+    gap: 0.375rem;
+    margin-top: -0.3rem;
+
+    label {
+        font-size: 14px;
+        color: white;
+        background: #ff9500;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: auto;
+
+    span {
+        color: #a980f8;
+        font-size: 12px;
+    }
+    svg {
+        color: #a980f8;
+    }
+}
+
+.more_card {
+    display: flex;
+    max-width: 16rem;
+    height: 19rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+    box-shadow: color.$shadow;
+    padding: 1.125rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

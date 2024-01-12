@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    min-height: 31.25rem;
+    margin: 1.3125rem 0;
+    border-radius: 0.625rem;
+
+    img {
+        margin-bottom: 1rem;
+    }
+}
+.title {
+    font-size: 1.125rem;
+    color: #333;
+}
+.message {
+    font-size: 0.875rem;
+    color: #191a1a;
+}

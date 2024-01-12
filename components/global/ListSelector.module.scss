@@ -1,0 +1,5 @@
+@use "../../styles/Button" as button;
+
+.button {
+    @include button.container;
+}

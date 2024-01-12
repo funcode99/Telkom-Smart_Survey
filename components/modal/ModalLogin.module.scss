@@ -1,0 +1,39 @@
+@use "../../styles/Color" as color;
+
+.anonymous {
+    border-top: 1px solid #cccdce;
+    margin-top: 0.4rem;
+    padding-top: 1.2rem;
+
+    button {
+        width: 100%;
+        box-shadow: 0px 5px 10px rgba(38, 25, 26, 0.1);
+        border-radius: 0.5rem;
+        border: 1px solid #cccdce;
+        padding: 1rem 1.25rem;
+        color: #333435;
+        font-size: 0.9375rem;
+        font-weight: bold;
+        color: color.$font-accent;
+
+        &:hover {
+            border: 1px solid color.$accent;
+        }
+    }
+}
+
+.close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0;
+
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        color: rgb(107, 107, 107);
+
+        &:hover {
+            color: red;
+        }
+    }
+}

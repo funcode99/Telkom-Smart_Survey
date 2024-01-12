@@ -1,0 +1,60 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Input" as input;
+@use "../../styles/Button" as button;
+
+.page_container {
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    font-family: "Ubuntu";
+    overflow: hidden;
+}
+
+.background {
+    background-image: url("../../public/images/login_background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+}
+
+.content_container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    padding: 3rem;
+    max-width: 34.25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #313466;
+}
+
+@media screen and (max-width: 1000px) {
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .page_container {
+        justify-content: center;
+        overflow-y: auto;
+        padding: 2rem 0;
+        height: fit-content;
+    }
+    .content_container {
+        height: fit-content;
+        max-width: 90%;
+        padding: 0;
+        background-color: transparent;
+    }
+}

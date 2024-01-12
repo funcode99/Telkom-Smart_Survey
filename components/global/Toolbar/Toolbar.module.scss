@@ -1,0 +1,58 @@
+@use "../../../styles/Color" as color;
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    min-height: 2.5rem;
+    height: fit-content;
+    gap: 1.25rem;
+
+    &.mobile {
+        gap: 1rem;
+    }
+}
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: color.$shadow-s;
+    margin-left: auto;
+    height: 2.5rem;
+
+    input {
+        width: 13rem;
+        padding: 0.5rem 2.5rem 0.5rem 0.8rem;
+        border-radius: 0.4rem;
+        border: 1px solid #e5e6e6;
+        height: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    svg {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .search_container {
+        margin-left: 0 !important;
+    }
+}

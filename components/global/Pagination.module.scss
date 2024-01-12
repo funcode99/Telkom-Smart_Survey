@@ -1,0 +1,82 @@
+@use "../../styles/Color" as color;
+
+.pagination_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1rem 0;
+    height: 100%;
+
+    span {
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+        margin-left: 5px;
+        font-size: 16px;
+        color: color.$accent;
+    }
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #f2f2f2;
+    box-shadow: color.$shadow;
+
+    li {
+        display: inline-block;
+        height: 100%;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            min-height: 30px;
+            height: 100%;
+            cursor: pointer;
+            color: color.$accent;
+            border-radius: 4px;
+            outline: none;
+            font-size: 20px;
+
+            &:hover {
+                background-color: color.$accent;
+                color: #fff;
+            }
+        }
+
+        &.disabled {
+            a {
+                box-shadow: none;
+                background-color: transparent;
+                cursor: default;
+                color: gray;
+
+                &:hover {
+                    color: color.$accent;
+                }
+            }
+        }
+
+        &.active {
+            a {
+                color: black;
+            }
+        }
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        // transform: translateY(2px);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .pagination_container {
+        justify-content: center;
+    }
+}

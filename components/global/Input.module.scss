@@ -1,0 +1,79 @@
+@use "../../styles/Color" as color;
+
+.label {
+    display: flex;
+    align-items: center;
+    margin: 12px 0 7px;
+    gap: 0.3125rem;
+
+    label {
+        font-size: 0.75rem;
+        color: #66686a;
+        margin: 0;
+    }
+
+    svg {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+}
+.input_container {
+    max-width: 100%;
+
+    &.error {
+        input,
+        textarea {
+            border: 1px solid #ee4c24;
+
+            &:focus {
+                border: 1px solid #ee4c24;
+            }
+        }
+    }
+}
+
+.input {
+    position: relative;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.9rem;
+        border-radius: 0.375rem;
+        outline: none;
+        border: 1px solid #e5e6e6;
+        height: 3rem;
+
+        &:focus {
+            border: 1px solid color.$accent;
+        }
+        &:disabled {
+            background-color: #f8f8f8;
+        }
+        &::placeholder {
+            color: #b1b1b1;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: auto;
+        padding: 0.75rem 1rem;
+    }
+}
+.hide_icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.error_message {
+    color: #ee4c24;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}

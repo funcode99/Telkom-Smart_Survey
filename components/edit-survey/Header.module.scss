@@ -1,0 +1,85 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Button" as button;
+@use "../../styles/Image" as image;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 12.125rem;
+    padding: 1.375rem 1.625rem;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
+}
+.background {
+    border-radius: 1rem 1rem 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // img {
+    //     @include image.center;
+    // }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+}
+.main_container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: flex-start;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    z-index: 2;
+}
+.title_container {
+    flex: 1;
+    color: white;
+    min-width: 0;
+
+    h1 {
+        margin-bottom: 0.875rem;
+        font-size: 1.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    span {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-height: 2.375rem;
+        overflow: hidden;
+    }
+}
+.upload_button {
+    top: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    span {
+        color: white;
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .upload_button {
+        span {
+            display: none;
+        }
+    }
+}

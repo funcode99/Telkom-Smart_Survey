@@ -1,0 +1,21 @@
+@use "../../styles/Button" as button;
+@use "../../styles/Color" as color;
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 3px 3px 0 0;
+
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+}
+.body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+    min-width: 20rem;
+}

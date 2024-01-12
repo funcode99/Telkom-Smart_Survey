@@ -1,0 +1,10 @@
+@use "../../../styles/Color" as color;
+
+.button {
+    font-size: 0.8rem;
+    box-shadow: color.$shadow-l;
+}
+.mobile {
+    border-color: transparent;
+    background-color: #fff;
+}

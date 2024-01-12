@@ -1,0 +1,41 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Size" as size;
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #faf8ff;
+    padding: 4.0625rem 0 4.6875rem;
+}
+.body {
+    width: 90%;
+    max-width: size.$max-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: color.$font-accent;
+        text-align: center;
+        font-size: 2.125rem;
+        font-weight: bold;
+    }
+    div {
+        width: 4.125rem;
+        height: 0.25rem;
+        background-color: #7b6ee3;
+        margin-top: 1.25rem;
+    }
+    p {
+        color: color.$font-accent;
+        text-align: center;
+        opacity: 0.7;
+        line-height: 1.375rem;
+    }
+}
+@media screen and (max-width: 970px) {
+    .container {
+        padding: 3rem 0;
+    }
+}

@@ -1,0 +1,46 @@
+@use "../../styles/Color" as color;
+
+.container {
+    display: flex;
+    gap: 1rem;
+}
+.card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 13.5rem;
+
+    label {
+        font-size: 0.875rem;
+        font-weight: bold;
+    }
+    span {
+        display: flex;
+        font-size: 0.875rem;
+        text-align: right;
+        color: #666;
+        gap: 0.125rem;
+
+        span {
+            align-self: flex-end;
+        }
+        b {
+            color: color.$font-accent;
+            font-size: 1.25rem;
+        }
+    }
+
+    &:hover {
+        border: 1px solid color.$accent;
+    }
+}
+.notice {
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-bottom: 1.75rem;
+    color: #666;
+}

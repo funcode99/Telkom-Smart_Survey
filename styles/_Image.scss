@@ -1,0 +1,14 @@
+@mixin center {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin center_h {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,30 @@
+.container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    // grid-template-rows: masonry;
+    gap: 3rem;
+    // width: 62.5rem;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: flex-start !important;
+}
+.input {
+    padding: 0.3125rem;
+    border-bottom: 1px solid #919191;
+    font-family: Ubuntu;
+    font-size: 0.875rem;
+}
+.custom_input {
+    font-size: 0.875rem;
+}
+.image {
+    width: 12.5rem;
+    height: 12.5rem;
+    position: relative;
+}

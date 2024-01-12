@@ -1,0 +1,213 @@
+import { useRef } from "react";
+import PropTypes from "prop-types";
+import { isMobile } from "detect-mobile-device";
+import styles from "./Toolbar.module.scss";
+
+import { AiOutlineSearch } from "react-icons/ai";
+import { BiFilterAlt } from "react-icons/bi";
+
+import { Button, ButtonContainer } from "./Button";
+import Dropdown from "./Dropdown";
+
+const Toolbar = ({
+    render = [],
+    renderMobile = [],
+    menuList,
+    dropdownList,
+    buttonList,
+    searchBox,
+    style,
+    className,
+    menuStyle,
+    dropdownStyle,
+    buttonStyle,
+    searchStyle,
+}) => {
+    const inputRef = useRef();
+
+    const MenuList = () => {
+        return (
+            <div className={styles.menu_container + (isMobile() ? " " + styles.mobile : "")} style={menuStyle}>
+                {menuList?.options?.map((menu) => {
+                    return (
+                        <label
+                            className={menu.value === menuList.value ? styles.active : null}
+                            onClick={() => menuList.onClick(menu.value, menu)}
+                            key={menu.value}
+                        >
+                            {menu.label}
+                        </label>
+                    );
+                })}
+            </div>
+        );
+    };
+
+    const DropdownList = () => {
+        if (isMobile()) {
+            return (
+                <Button isTransparent style={{ height: "2.5rem" }}>
+                    <BiFilterAlt />
+                    <span>Filter</span>
+                </Button>
+            );
+        } else {
+            return (
+                <div className={styles.dropdown_container} style={dropdownStyle}>
+                    {dropdownList?.map((dropdown) => {
+                        return (
+                            <div className={styles.dropdown} key={dropdown.id}>
+                                <Dropdown
+                                    id={dropdown.id}
+                                    options={dropdown.options}
+                                    onSelect={(value, data) => {
+                                        dropdown.onSelect(value, data);
+                                    }}
+                                    value={dropdown.value}
+                                    style={{ height: "2.5rem" }}
+                                    isFloating
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
+            );
+        }
+    };
+
+    const ButtonList = () => {
+        return (
+            <ButtonContainer style={{ width: "fit-content", alignItems: "center", ...buttonStyle }}>
+                {buttonList?.map((button) => {
+                    return (
+                        !button.isHidden && (
+                            <Button
+                                className={styles.button}
+                                isTransparent={button.isTransparent}
+                                isDisabled={button.isDisabled}
+                                isLoading={button.isLoading}
+                                onClick={() => button.onClick(button)}
+                                key={button.label}
+                                style={{ height: "2.5rem", minWidth: "8.4rem", padding: "0 1rem", ...button.style }}
+                            >
+                                {button.icon}
+                                {button.label}
+                            </Button>
+                        )
+                    );
+                })}
+            </ButtonContainer>
+        );
+    };
+
+    if (isMobile() && renderMobile.length) {
+        return (
+            <div className={styles.container + " " + styles.mobile}>
+                {renderMobile.map((row, index) => {
+                    return (
+                        <div className={styles.row} key={index}>
+                            {row.map((component) => {
+                                switch (component) {
+                                    case "menu":
+                                        return <MenuList />;
+                                    case "dropdown":
+                                        return <DropdownList />;
+                                    case "button":
+                                        return <ButtonList />;
+                                    default:
+                                        return null;
+                                }
+                            })}
+                        </div>
+                    );
+                })}
+            </div>
+        );
+    } else {
+        return (
+            <div className={styles.container + (isMobile() ? " " + styles.mobile : "") + (className ? " " + className : "")} style={style}>
+                {render.map((component) => {
+                    if (component === "search") {
+                        return (
+                            <div
+                                className={styles.search_container}
+                                style={{ marginLeft: menuList ? "auto" : 0, marginRight: menuList ? 0 : "auto", ...searchStyle }}
+                            >
+                                <input
+                                    ref={inputRef}
+                                    placeholder={searchBox.placeholder || "Cari promo poinmu"}
+                                    value={searchBox.value}
+                                    onChange={(e) => {
+                                        searchBox.onChange(e.target.value);
+                                        inputRef.current.focus();
+                                    }}
+                                />
+                                <AiOutlineSearch />
+                            </div>
+                        );
+                    } else {
+                        switch (component) {
+                            case "menu":
+                                return <MenuList />;
+                            case "dropdown":
+                                return <DropdownList />;
+                            case "button":
+                                return <ButtonList />;
+                            default:
+                                return null;
+                        }
+                    }
+                })}
+            </div>
+        );
+    }
+};
+
+Toolbar.propTypes = {
+    render: PropTypes.arrayOf(PropTypes.oneOf(["menu", "search", "dropdown", "button"])),
+    renderMobile: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.oneOf(["menu", "search", "dropdown", "button"]))),
+    menuList: PropTypes.shape({
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        onClick: PropTypes.func,
+        options: PropTypes.arrayOf(
+            PropTypes.shape({
+                label: PropTypes.string,
+                value: PropTypes.string,
+            })
+        ),
+    }),
+    searchBox: PropTypes.shape({
+        placeholder: PropTypes.string,
+        value: PropTypes.string,
+        onChange: PropTypes.func,
+    }),
+    dropdownList: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string,
+            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+            options: PropTypes.arrayOf(
+                PropTypes.shape({
+                    label: PropTypes.string,
+                    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+                })
+            ),
+        })
+    ),
+    buttonList: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            onClick: PropTypes.func,
+            isTransparent: PropTypes.bool,
+            isHidden: PropTypes.bool,
+        })
+    ),
+    activeMenu: PropTypes.string,
+    className: PropTypes.string,
+    style: PropTypes.object,
+    menuStyle: PropTypes.object,
+    searchStyle: PropTypes.object,
+    dropdownStyle: PropTypes.object,
+    buttonStyle: PropTypes.object,
+};
+
+export default Toolbar;

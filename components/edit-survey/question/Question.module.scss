@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.empty_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 20rem;
+
+    label,
+    p {
+        color: #ababab;
+        letter-spacing: 0.0075rem;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 0.9375rem;
+    }
+    p {
+        font-size: 0.875rem;
+        margin: 0.5rem 0 0.5rem;
+    }
+}

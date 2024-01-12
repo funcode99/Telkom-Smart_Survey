@@ -1,0 +1,94 @@
+@use "../../styles/Color" as color;
+
+.container {
+    margin-top: 2.625rem;
+    max-width: 100%;
+    overflow-x: auto;
+    transform: translateX(-1rem);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+.title {
+    display: flex;
+    padding-left: 1rem;
+    align-items: flex-end;
+
+    h4 {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: color.$font-accent;
+    }
+    button {
+        color: color.$accent;
+        font-size: 0.875rem;
+        font-weight: bold;
+        margin-left: auto;
+        white-space: nowrap;
+    }
+}
+.slider_container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .more {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        z-index: 2;
+
+        .gradient {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.16);
+            cursor: pointer;
+        }
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    .left {
+        left: 0;
+        .gradient {
+            background: linear-gradient(to right, whitesmoke, rgba(0, 0, 0, 0) 80%);
+            justify-content: flex-start;
+        }
+        svg {
+            transform: translate(-1px) scaleX(-1);
+        }
+    }
+    .right {
+        right: 0;
+        .gradient {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), whitesmoke 80%);
+            justify-content: flex-end;
+        }
+        svg {
+            transform: translate(2px);
+        }
+    }
+}
+.slider {
+    position: relative;
+    width: max-content;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    transition: 0.3s;
+}

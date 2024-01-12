@@ -1,0 +1,28 @@
+@use "../../styles/Input" as input;
+
+.radio_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.radio {
+    position: relative;
+    @include input.radio;
+    flex: 1;
+
+    span {
+        width: max-content;
+    }
+
+    .hide {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 18px !important;
+        height: 18px !important;
+        cursor: pointer;
+    }
+}

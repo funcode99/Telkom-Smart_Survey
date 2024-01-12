@@ -1,0 +1,78 @@
+[
+    {
+        "title": "Apa itu Kutanya?",
+        "content": "<p>Kutanya.com adalah platform yang menyediakan berbagai macam fitur untuk kebutuhan surveymu, mulai dari membeli template yang kamu butuhkan, question bank, dashboard visualisasi hasil survey, export to excel dan masih banyak lainnya.</p>"
+    },
+    {
+        "title": "Bagaimana cara saya mendaftar di Kutanya?",
+        "content": "<p>Sangat mudah mendaftar di Kutanya.com yaitu:<br/>1. Klik tombol Register Here pada halaman awal Kutanya.com<br/>2. Isi semua form yang tersedia<br/>3. Masukkan OTP yang terkirim di nomor handphone<br/>4. Jika sukses kamu sudah bisa login ke aplikasi</p>"
+    },
+    {
+        "title": "Bagaimana cara membuat survey?",
+        "content": "<p>Membuat survey pada Kutanya.com sangat mudah dilakukan yaitu:<br/>1. Klik tombol Home jika kamu sudah login ke dalam aplikasi<br/>2. Disamping kanan, terdapat tombol Blank untuk membuat surveymu dari awal atau pilih template survey yang sesuai kebutuhanmu (tersedia gratis dan berbayar)<br/>3. Isi form untuk mengisi detail surveymu<br/>4. Klik Create Survey untuk membuat survey barumu</p>"
+    },
+    {
+        "title": "Bagaimana cara membuat pertanyaan pada survey?",
+        "content": "<p>Membuat pertanyaan untuk ditambahkan didalam survey:<br/>1. Akses terlebih dahulu survey yang ingin kamu tambahkan<br/>2. Klik Add Question untuk membuat pertanyaan baru<br/>3. Isi form pada pertanyaan dan jangan lupa pilih type pertanyaan yang ingin kamu buat<br/>4. Tambahkan pilihan jawaban untuk pertanyaan yang kamu buat (bisa lebih dari satu, tergantung type pertanyaan)<br/>5. Jika sudah, klik Save untuk menyimpan dan memasukkan pertanyaan kedalam surveymu</p>"
+    },
+    {
+        "title": "Bagaimana cara membagikan survey saya?",
+        "content": "<p>Kamu bisa membagikan surveymu dengan cara:<br/>1. Akses survey yang akan kamu bagikan<br/>2. Pastikan survey yang kamu buat sudah di submit<br/>3.  Jika surveymu belum di submit, bisa di cek pada menu “draft”<br/>3. Klik tombol Share di sisi kanan atas<br/>4. Muncul pop up untuk membagikan surveymu, kamu bisa klik Generate Link untuk membagikannya dengan link atau klik ikon sosial media yang ingin kamu bagikan</p>"
+    },
+    {
+        "title": "Apa saja tipe pertanyaan yang bisa saya buat?",
+        "content": "<p>Kutanya.com menyediakan berbagai type pertanyaan untuk memenuhi kebutuhanmu dalam survey seperti:<br/>1. Descriptive text atau Jawaban singkat<br/>2. Multiple choice atau Pilihan ganda<br/>3. Multi-select atau kotak centang untuk pilihan jawaban yang bisa dipilih lebih dari 1<br/>4. Scale atau skala untuk melakukan penilaian<br/>5. Upload file atau unggah file</p>"
+    },
+    {
+        "title": "Bagimana cara menambahkan kontributor pada survey yang saya buat?",
+        "content": "<p>Cara menambahkan kontributor untuk surveymu adalah yaitu:<br/>1. Pilih menu Group di sisi kiri<br/>2. Tambahkan temanmu/orang yang ikut berkontribusi pada surveymu dengan menggunakan email<br/>3. Kemudian klik Submit<br/>4. Jika grup sudah dibuat, lalu akses Customize pada surveymu dan pilih Only Grup untuk menambahkan kontributor<br/>5. Pada allowed group pilih grup yang akan berkontribusi pada surveymu<br/>5. Klik Save untuk menyimpan peraturan dan surveymu sudah bisa menambahka kontributor</p>"
+    },
+    {
+        "title": "Bagaimana cara melihat hasil survey saya?",
+        "content": "<p>Kamu bisa melihat hasil survey yang kamu buat dengan cara:<br/>1. Akses terlebih dahulu surveymu<br/>2. Klik Result untuk melihat hasil survey<br/>3. Didalam menu result, kamu bisa melihat hasilnya secara summary/keseluruhan, individual dan juga score<br/>4. Jika memilih individual jawaban survey akan ditampilkan per respondent<br/>5. Jika memilih summary maka jawaban semua respondent pada 1 pertanyaan akan dikumpulkan dalam bentuk chart atau grafik<br/>6. JIka memilih score maka akan menampilkan chart berdasarkan score tertinggi</p>"
+    },
+    {
+        "title": "Bagaimana saya menggunakan fitur Question Bank?",
+        "content": "<p>Kamu bisa menggunakan Question Bank dengan cara:<br/>1. Akses survemu terlebih dahulu<br/>2. Klik Question Bank untuk membuka question<br/>3. Cari dan pilih tema pertanyaan yang kamu butuhkan<br/>4. Pilih pertanyaan yang ingin kamu tambahkan dengan mencentang pertanyaan tersebut<br/>5. Jika sudah, klik Add Question<br/>6. Terakhir, pertanyaan dari question bank berhasil masuk kedalam surveymu</p>"
+    },
+    {
+        "title": "Bagaimana cara menggunakan template?",
+        "content": "<p>Kamu bisa menggunakan template survey yang kamu butuhkan dengan cara:<br/>1. Pilih menu Toko yang ada di sisi kiri<br/>2. Cari dan pilih survey sesuai kebutuhanmu atau pilih yang gratis untuk langsung menggunakan<br/>3. Klik detail survey yang kamu pilih<br/>4. Klik Use Template pada survey yang kamu inginkan<br/>5. Jika sudah berhasil, kamu bisa gunakan langsung survey yang kamu beli</p>"
+    },
+    {
+        "title": "Bagaimana cara membeli template?",
+        "content": "<p>Kamu bisa membeli survey yang kamu butuhkan dengan cara:<br/>1. Pilih menu Toko yang ada di sisi kiri<br/>2. Cari dan pilih survey sesuai kebutuhanmu<br/>3. Klik detail survey yang kamu pilih<br/>4. Klik Buy This Template pada survey yang kamu inginkan<br/>5. Klik Buy dan pastikan poin kamu mencukupi (jika poin tidak mencukupi silakan top up poinmu terlebih dahulu)<br/>6. Jika sudah berhasil, kamu bisa gunakan langsung survey yang kamu beli</p>"
+    },
+    {
+        "title": "Bagaimana cara menjual template yang saya buat?",
+        "content": "<p>Kamu bisa menjual survey yang kamu buat dengan cara:<br/>1. Akses terlebih dahulu survey yang akan kamu jual<br/>2. Klik customize pada surveymu<br/>3. Pilih Public pada pengaturan Publish<br/>4. Pilih Yes pada pengaturan Sell Survey<br/>5. Masukkan harga survey yang ingin kamu jual dengan satuan poin<br/>6. Konversi 1 poin = Rp100<br/>7. Klik save untuk menyimpan pengaturan yang sudah kamu atur pada survey<br/>8. Silakan klik menu Toko untuk melihat survey yang kamu jual apakah sudah tersedia di dalam toko</p>"
+    },
+    {
+        "title": "Bagaimana cara membeli poin pada Kutanya.com?",
+        "content": "<p>Kamu bisa membeli poin pada Kutanya.com dengan cara klik Top Up di samping informasi total poin. Pilih paket atau size untuk poin yang kamu ingin beli, lalu pilih metode pembayaran yang ingin kamu gunakan. Selanjutnya silakan lakukan pembayaran dan nantinya poin yang kamu beli akan masuk kedalam akun kamu.</p>"
+    },
+    {
+        "title": "Bagaimana cara melihat riwayat transaksi?",
+        "content": "<p>Kamu bisa melihat history transaksi dengan cara klik History dibawah informasi total poin yang kamu miliki.</p>"
+    },
+    {
+        "title": "Bagaimana cara menggunakan voucher?",
+        "content": "<p>Kamu bisa memasukkan kode voucher yang kamu miliki dengan klik Redeem dibawah informasi total poin yang kamu miliki.</p>"
+    },
+    {
+        "title": "Bagaimana cara saya keluar dari aplikasi?",
+        "content": "<p>Kamu bisa keluar dengan aplikasi dengan mengklik tombol Keluar/Log Out yang ada di sisi kiri bawah.</p>"
+    },
+    {
+        "title": "Apakah teman saya bisa menjawab survey tanpa harus mendaftar?",
+        "content": "<p>Temanmu bisa langsung menjawab survey yang kamu buat tanpa harus mendaftar dengan cara memilih menjadi guest, namun teman kamu tetap harus memasukkan nama dan juga email untuk informasi respondent.</p>"
+    },
+    {
+        "title": "Apa saja metode pembayaran yang tersedia di Kutanya.com?",
+        "content": "<p>Di kutanya.com terdapat berbagai metode pembayaran seperti:<br/>1. ATM/Bank Transfer (ATM Bersama, Prima, Alto)<br/>2. Gopay/OVO atau e-wallet lainnya<br/>3. Debit/Credit Card<br/>Silakan pilih sesuai sesuai yang ingin kamu gunakan untuk pembayaran</p>"
+    },
+    {
+        "title": "Apa saja kategori template yang tersedia pada toko?",
+        "content": "<p>Kategori yang tersedia pada toko sangat bermacam-macam seperti:<br/>1. Business & E-Commerce<br/>2. Education<br/>3. Fashion<br/>4. Food<br/>5. Health<br/>6. Market Research<br/>7. Music<br/>8. Travel & Tourism<br/>9. Sport<br/>10. Work & Occupation<br/>11. Others</p>"
+    }
+]

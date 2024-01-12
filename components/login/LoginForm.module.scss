@@ -1,0 +1,114 @@
+@use "../../styles/Color" as color;
+@use "../../styles/Input" as input;
+@use "../../styles/Button" as button;
+@use "../../styles/Login" as login;
+
+.container {
+    padding: 1.8125rem;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    width: 25rem;
+    max-width: 100%;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1.875rem;
+    }
+    label {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        margin-bottom: 5px;
+        color: #66686a;
+    }
+    input {
+        @include input.basic;
+    }
+
+    label {
+        float: left;
+        font-size: 0.75em;
+    }
+
+    p {
+        color: #66686a;
+        text-align: center;
+        margin: 20px 16px 0;
+        font-size: 0.875rem;
+
+        span {
+            color: color.$accent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    &.popup {
+        box-shadow: none;
+        padding: 1rem;
+    }
+}
+
+.input {
+    margin-bottom: 1rem;
+}
+.button {
+    @include button.container;
+
+    button {
+        height: 3rem;
+    }
+}
+.button_google {
+    margin-top: 0.7rem;
+    @include button.container;
+
+    button {
+        @include button.icon;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: transparent;
+        color: rgb(61, 61, 61);
+        height: 3rem;
+        border-color: #039be5;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+.forgot {
+    text-align: right;
+    font-size: 0.8125rem;
+    color: color.$accent;
+    margin: 0.5rem 0 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.875rem 0;
+
+    div {
+        flex: 1;
+        height: 1px;
+        background-color: #e2e2e2;
+    }
+    span {
+        color: color.$font-accent;
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        padding: 1rem;
+    }
+}

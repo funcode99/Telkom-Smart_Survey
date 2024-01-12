@@ -1,0 +1,77 @@
+#https://gitlab.com/gitlab-org/charts/gitlab/-/issues/478#note_608744181
+stages:
+  - build
+  - test
+  - deploy
+
+#=== ABSTRACT
+.build:
+  stage: build
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://dind:2375
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - cat "$ENV" > .env
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - DOCKER_BUILDKIT=1 docker build --build-arg BUILDKIT_INLINE_CACHE=1 --cache-from "$CI_REGISTRY_IMAGE:${PREFIX}latest" -t "$CI_REGISTRY_IMAGE:$VERSION" -t "$CI_REGISTRY_IMAGE:${PREFIX}latest" .
+    - docker push "$CI_REGISTRY_IMAGE:${PREFIX}latest"
+    - docker push "$CI_REGISTRY_IMAGE:$VERSION"
+
+.deploy:
+  stage: deploy
+  image: google/cloud-sdk
+  script:
+    - echo ${SERVICE_ACCOUNT_KEY} > key.json
+    - gcloud auth activate-service-account --key-file=key.json
+    - gcloud config set project $GCP_PROJECT_ID
+    - gcloud config set container/cluster $GCP_CLUSTER_ID
+    - gcloud config set compute/zone $GCP_REGION_ID
+    - gcloud container clusters get-credentials $GCP_CLUSTER_ID --zone $GCP_REGION_ID --project $GCP_PROJECT_ID
+    - kubectl set image deployment/$APP_NAME app=$CI_REGISTRY_IMAGE:$VERSION --namespace=$NAMESPACE
+
+#=== Staging
+stg-build:
+  environment: staging
+  variables:
+    PREFIX: "dev-"
+  only:
+    - "staging"
+  extends:
+    - .build
+  before_script:
+    - export VERSION=dev-$(date '+%Y-%m-%d')-$CI_COMMIT_SHORT_SHA
+
+stg-deploy:
+  environment: staging
+  only:
+    - "staging"
+  extends:
+    - .deploy
+  before_script:
+    - export VERSION=dev-$(date '+%Y-%m-%d')-$CI_COMMIT_SHORT_SHA
+  needs:
+    - stg-build
+
+#=== Production
+prod-build:
+  environment: production
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/'
+      when: manual
+  extends:
+    - .build
+  before_script:
+    - export VERSION=$CI_COMMIT_TAG
+
+prod-deploy:
+  environment: production
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/'
+  extends:
+    - .deploy
+  before_script:
+    - export VERSION=$CI_COMMIT_TAG
+  needs:
+    - prod-build
+

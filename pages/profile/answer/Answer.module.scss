@@ -1,0 +1,63 @@
+@use "../../../styles/Color" as color;
+$border: 1px solid #cccdce;
+
+.container {
+    background-color: #fff;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1.25rem 0 1rem;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .back {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+            font-size: 1rem;
+        }
+        svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+}
+.table {
+    margin-top: 2rem;
+    width: 100%;
+    table-layout: fixed;
+    border: $border;
+
+    td,
+    th {
+        color: #383874;
+        padding: 0.8125rem 1.6875rem;
+        word-break: break-word;
+    }
+    th {
+        border-bottom: $border;
+        font-weight: bold;
+        color: #313466;
+        text-align: left;
+    }
+
+    .left {
+        box-shadow: 10px 0px 24px rgba(0, 0, 0, 0.08);
+    }
+    .right {
+        border-left: $border;
+        box-shadow: color.$shadow;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+}

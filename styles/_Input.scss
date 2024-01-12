@@ -1,0 +1,32 @@
+@use "./Color" as color;
+
+@mixin basic {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 1rem;
+
+    &:focus {
+        border: 1px solid color.$accent;
+    }
+}
+@mixin radio {
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    &:hover {
+        div {
+            svg {
+                fill: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+}

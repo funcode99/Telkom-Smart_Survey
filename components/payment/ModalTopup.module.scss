@@ -1,0 +1,136 @@
+@use "../../styles/Color" as color;
+
+.header {
+    display: flex;
+    margin-bottom: 1.625rem;
+    align-items: center;
+    gap: 1rem;
+
+    h5 {
+        font-size: 1.125rem;
+        color: #333;
+        font-weight: bold;
+    }
+    svg {
+        margin-left: auto;
+        color: color.$font-accent;
+        width: 1.4rem;
+        height: 1.4rem;
+        cursor: pointer;
+    }
+    .back_icon {
+        margin-left: 0;
+    }
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card {
+    display: flex;
+    width: 21.625rem;
+    background-color: #fff;
+    border-radius: 0.625rem 1rem 0.625rem 0.625rem;
+    box-shadow: color.$shadow-l;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: 0px 0px 12px rgba($color: color.$accent, $alpha: 0.4);
+    }
+
+    .left {
+        padding: 1rem;
+
+        label {
+            color: color.$font-accent;
+            font-size: 0.8125rem;
+            font-weight: bold;
+            margin-bottom: 0.375rem;
+        }
+        span {
+            color: #a980f8;
+            font-size: 2.125rem;
+            font-weight: bold;
+        }
+    }
+
+    .right {
+        margin-left: auto;
+        background: color.$accent-gradient;
+        height: fit-content;
+        border-radius: 0 1rem;
+        padding: 0.5rem 1.625rem 0.5rem 1.0625rem;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+}
+
+.detail_container {
+    .header {
+        margin-bottom: 2.5rem;
+    }
+    .body {
+        gap: 1rem;
+
+        span {
+            font-size: 1rem;
+            color: color.$font-accent;
+        }
+        .row {
+            width: 21.625rem;
+            display: flex;
+            align-items: center;
+        }
+        .price {
+            margin-left: auto;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .quantity {
+            display: flex;
+
+            .adjust {
+                height: 3rem;
+                margin-left: auto;
+                display: flex;
+
+                div,
+                button {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 0.625rem;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: color.$font-accent;
+                    border: 1px solid #e5e6e6;
+                }
+                button {
+                    svg {
+                        color: #756ce0;
+                    }
+                }
+
+                .left {
+                    border-radius: 0.25rem 0 0 0.25rem;
+                }
+                .center {
+                    padding: 0 0.875rem;
+                }
+                .right {
+                    border-radius: 0 0.25rem 0.25rem 0;
+                }
+            }
+        }
+        .total {
+            padding-top: 1rem;
+            border-top: 1px solid #e9e9e9;
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+}

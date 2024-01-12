@@ -1,0 +1,39 @@
+@use "../../styles/Survey" as survey;
+
+.container {
+    @include survey.container;
+    display: flex;
+    min-height: 100vh;
+}
+.background {
+    @include survey.background;
+}
+.content {
+    @include survey.content;
+    display: block;
+}
+.loading {
+    @include survey.loading;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 90%;
+    margin: 1.9375rem 0 3.5rem;
+    width: 44.5rem;
+    z-index: 5;
+
+    span {
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 1.125rem;
+        color: white;
+    }
+    button {
+        color: white;
+        font-weight: bold;
+        font-size: 0.875rem;
+    }
+}

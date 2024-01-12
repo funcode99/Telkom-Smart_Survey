@@ -1,0 +1,40 @@
+@use "../../styles/Color" as color;
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: color.$font-accent;
+
+    .title {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        gap: 0.75rem;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #313466;
+    }
+
+    svg {
+        min-width: 1.5rem;
+        min-height: 1.5rem;
+        cursor: pointer;
+    }
+
+    &.modal {
+        margin-bottom: 1.25rem;
+
+        h1 {
+            font-size: 1.125rem;
+        }
+    }
+}
